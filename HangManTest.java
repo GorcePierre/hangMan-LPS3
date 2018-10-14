@@ -1,11 +1,23 @@
+import java.util.Arrays;
 /**
  * HangManTest
  */
 public class HangManTest {
 
     public static void printTest() {
-        String[] message = { "ok" };
-        assertEquals(" --> PRINTED", "ok", IsPrinting.text(message));
+        int index = 0;
+        assertEquals(" --> PRINTED TEXT", "WELCOME TO HANGMAN", IsPrinting.text(index));
+
+    }
+
+    public static void checkPositionLetterTest() {
+        int[] letterIndex = {1,4};
+        int[] letterIndex1 = {2,5};
+        int[] letterIndex2 = {3};
+
+        assertEquals(" --> CHECKED LETTER", letterIndex, IsWorking.checkPositionLetter("jadhad", "a"));
+        assertEquals(" --> CHECKED LETTER", letterIndex1, IsWorking.checkPositionLetter("jadhad", "d"));
+        assertEquals(" --> CHECKED LETTER", letterIndex2, IsWorking.checkPositionLetter("jadhad", "h"));
 
     }
 
@@ -25,12 +37,28 @@ public class HangManTest {
         }
     }
 
+    public static void assertEquals(String message, int[] expected, int[] res) {
+        if (Arrays.equals(res,expected)) {
+            System.out.println("\nOK >> " + message);
+        } else {
+            throw new Error("\nKO!! >> " + message);
+        }
+    }
+
+    public static void assertEquals(String message, char expected, char res) {
+        if (expected == res) {
+            System.out.println("\nOK >> " + message);
+        } else {
+            throw new Error("\nKO!! >> " + message);
+        }
+    }
+
     public static void assertEquals(String message, String expected, String res) {
-            if (expected == res) {
-                System.out.println("\nOK >> " + message);
-            } else {
-                throw new Error("\nKO!! >> " + message);
-            }
+        if (expected == res) {
+            System.out.println("\nOK >> " + message);
+        } else {
+            throw new Error("\nKO!! >> " + message);
+        }
     }
 
     public static void assertTrue(String message, boolean res) {
@@ -50,6 +78,5 @@ public class HangManTest {
     }
 }
 /**
- * Creating <3 by LPS3
- *  14/10/2018
+ * Creating  with <3 by LPS3 14/10/2018
  */
