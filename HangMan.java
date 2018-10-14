@@ -7,3 +7,7 @@ public class HangMan {
         HangManTest.printTest();
     }
 }
+/**
+ * Creating <3 by LPS3
+ * 14/10/2018
+ */

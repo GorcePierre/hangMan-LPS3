@@ -5,7 +5,7 @@ public class HangManTest {
 
     public static void printTest() {
         String[] message = { "ok" };
-        assertEquals("OK --> PRINTED", "ok", IsPrinting.text(message));
+        assertEquals(" --> PRINTED", "ok", IsPrinting.text(message));
 
     }
 
@@ -26,7 +26,7 @@ public class HangManTest {
     }
 
     public static void assertEquals(String message, String expected, String res) {
-            if (expected == response) {
+            if (expected == res) {
                 System.out.println("\nOK >> " + message);
             } else {
                 throw new Error("\nKO!! >> " + message);
@@ -49,3 +49,7 @@ public class HangManTest {
         }
     }
 }
+/**
+ * Creating <3 by LPS3
+ *  14/10/2018
+ */
