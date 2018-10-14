@@ -8,7 +8,6 @@ import java.util.List;
 public class IsWorking {
 
     public static int[] checkPositionLetter(String word, String letter) {
-
         int index = 0;
         List<Integer> indexList = new ArrayList<Integer>();
         String[] splitedWord = word.split("");
@@ -22,8 +21,18 @@ public class IsWorking {
 
         int[] letterPositions = new int[indexList.size()];
         letterPositions = indexList.stream().mapToInt(Integer::intValue).toArray();
-
         return letterPositions;
+    }
+
+    public static String[] replaceLetter(int[] positions, String letter, String[] hiddenWord) {
+
+        System.out.print(Arrays.toString(hiddenWord));
+        for (int position : positions) {
+            hiddenWord[position] = letter;
+            System.out.print(hiddenWord[position]);
+        }
+        System.out.print(Arrays.toString(hiddenWord));
+        return hiddenWord;
     }
 }
 /**
