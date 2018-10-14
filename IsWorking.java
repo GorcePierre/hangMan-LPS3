@@ -1,0 +1,7 @@
+/**
+ * IsWorking
+ */
+public class IsWorking {
+
+    
+}
