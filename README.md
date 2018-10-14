@@ -28,6 +28,8 @@ add animations.
   
   $ git clone url
   
+  deplace in the new folder
+  
   create a branch.
   
   $ git branch "feature"
