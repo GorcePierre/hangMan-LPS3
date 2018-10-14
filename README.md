@@ -6,6 +6,8 @@
 
 make a two players game.
 
+develop with tdd.
+
 step by step game.
 
 add animations. 
@@ -19,6 +21,8 @@ add animations.
  make a pull request.
  
 ### Make a readable code.
+
+carefull about named variable.
   
 ## Have Fun.
 
@@ -27,6 +31,8 @@ add animations.
   create a  folder named hangMan.
   
   $ git clone url
+  
+  deplace in the new folder
   
   create a branch.
   
