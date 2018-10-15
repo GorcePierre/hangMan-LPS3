@@ -33,8 +33,9 @@ public class IsWorking {
 
     public static boolean setVIctory(String[] hiddenWord, String word) {
 
-        String isSrtingHiddenWord = String.join("", hiddenWord);
-        if (isSrtingHiddenWord.equals(word)) {
+        String isStringHiddenWord = String.join("", hiddenWord);
+        System.out.println("etape 6 :" + word +" "+ isStringHiddenWord);
+        if (isStringHiddenWord.equals(word)) {
             return true;
         }
         return false;

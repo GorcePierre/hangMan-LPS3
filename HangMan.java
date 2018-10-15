@@ -1,4 +1,5 @@
 import java.util.Arrays;
+
 /**
  * HangMan
  */
@@ -6,33 +7,39 @@ public class HangMan {
 
     public static void main(String[] args) {
 
-        Utilities.clearScreen();
-
         IsPrinting.text(0);
         IsPrinting.text(1);
         int maxLength = User.chooseMaxLength();
         IsPrinting.text(2);
 
         boolean isVictory = false;
-        String chosenLetter = "";
-        Word word = new Word("");
+        Word word = new Word();
 
         word.setWord(User.isSelectWord(maxLength));
-        System.out.print(word);
-        Utilities.clearScreen();
-        String[] hiddenWord = new String[word.getWord().length()];
-        hiddenWord = Utilities.hideWord(word.getWord());
-        System.out.print(Arrays.toString(hiddenWord));
-        Utilities.hideWord(word.getWord());
-        System.out.print(Arrays.toString(hiddenWord));
-        IsPrinting.text(3);
-        User.isSelectletter();
 
-        int[] letterPosition = IsWorking.checkPositionLetter(word.getWord(), chosenLetter);
+        String wordToFind = word.getWord();
+        String[] hiddenWord = new String[wordToFind.length()];
 
-        IsWorking.replaceLetter(letterPosition, chosenLetter, hiddenWord);
+        hiddenWord = Word.hideWord(wordToFind);
+        System.out.println("etape 1.1: " + Arrays.toString(hiddenWord));
+        
 
-        System.out.println(IsWorking.setVIctory(hiddenWord, word.getWord()));
+        while (!isVictory){
+            IsPrinting.text(3);
+            String chosenLetter = User.isSelectletter();
+            System.out.println("etape 1: " + chosenLetter);
+            int[] letterPosition = IsWorking.checkPositionLetter(wordToFind, chosenLetter);
+            System.out.println("etape 2: "+ Arrays.toString(letterPosition));
+            String[] foundLetters = IsWorking.replaceLetter(letterPosition, chosenLetter, hiddenWord);
+            System.out.println("etape 3: " + chosenLetter);
+            isVictory = IsWorking.setVIctory(foundLetters, wordToFind);
+            System.out.println("etape 4: " + wordToFind);
+            System.out.println("etape 5: " +Arrays.toString(foundLetters));
+            System.out.println(isVictory);
+
+        };
+
+        System.out.println("la partie est terminée");
         System.out.println("ok");
 
         HangManTest.printTest();
@@ -44,5 +51,5 @@ public class HangMan {
 
 }
 /**
- * Creating  wiht <3 by LPS3 14/10/2018
+ * Creating wiht <3 by LPS3 14/10/2018
  */
