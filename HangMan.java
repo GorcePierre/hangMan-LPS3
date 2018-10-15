@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class HangMan {
 
     public static void main(String[] args) {
-
+      // modif laurent
         Utilities.clearScreen();
 
         IsPrinting.text(0);
