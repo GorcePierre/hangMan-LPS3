@@ -18,7 +18,6 @@ public class IsWorking {
             }
             index++;
         }
-
         int[] letterPositions = new int[indexList.size()];
         letterPositions = indexList.stream().mapToInt(Integer::intValue).toArray();
         return letterPositions;
@@ -26,13 +25,19 @@ public class IsWorking {
 
     public static String[] replaceLetter(int[] positions, String letter, String[] hiddenWord) {
 
-        System.out.print(Arrays.toString(hiddenWord));
         for (int position : positions) {
             hiddenWord[position] = letter;
-            System.out.print(hiddenWord[position]);
         }
-        System.out.print(Arrays.toString(hiddenWord));
         return hiddenWord;
+    }
+
+    public static boolean setVIctory(String[] hiddenWord, String word) {
+
+        String isSrtingHiddenWord = String.join("", hiddenWord);
+        if (isSrtingHiddenWord.equals(word)) {
+            return true;
+        }
+        return false;
     }
 }
 /**

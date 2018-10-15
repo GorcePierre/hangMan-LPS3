@@ -4,12 +4,19 @@ import java.util.Arrays;
  * HangManTest
  */
 public class HangManTest {
+    /**
+     * IsPrinting test.
+     */
 
     public static void printTest() {
         int index = 0;
         assertEquals(" --> PRINTED TEXT", "WELCOME TO HANGMAN", IsPrinting.text(index));
 
     }
+
+    /**
+     * IsWorking test.
+     */
 
     public static void checkPositionLetterTest() {
         int[] letterIndex = { 1, 4 };
@@ -37,6 +44,28 @@ public class HangManTest {
         assertEquals("--> REPLACED LETTER", replacedLetter3, IsWorking.replaceLetter(letterPosition3, "e", array3));
 
     };
+
+    public static void setVictoryTest() {
+
+        assertFalse("--> SET VICTORY", false);
+        
+    }
+
+    /**
+     * User test.
+     */
+
+    /**
+     * Utilities test.
+     */
+    public static void hideWordTest() {
+        String[] hiddenWord = {"_","_","_","_","_"};
+
+        assertEquals("--> HIDE WORD",hiddenWord,Utilities.hideWord("arbre"));
+    }    
+    /**
+     * Testing functions.
+     */
 
     public static void assertEquals(String message, double expected, double res) {
         if (Math.abs(expected - res) < 0.0001) {
