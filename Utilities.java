@@ -11,14 +11,7 @@ public class Utilities {
             hiddenWord[i] = new String("_");
             i++;
         }
-
-
         return  hiddenWord;
-    }
-
-    public static void clearScreen() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
     }
 
 

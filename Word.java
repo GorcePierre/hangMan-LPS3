@@ -16,4 +16,14 @@ public class Word {
   public String getWord(){
     return this.word;
   }
+
+  public static String[] hideWord(String word) {
+    String[] hiddenWord = new String[word.length()];
+    int i = 0;
+    for (String letter : hiddenWord) {
+      hiddenWord[i] = new String("_");
+      i++;
+    }
+    return hiddenWord;
+  }
 }
