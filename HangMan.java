@@ -19,11 +19,12 @@ public class HangMan {
         System.out.print(word);
         Utilities.clearScreen();
         String[] hiddenWord = new String[word.getWord().length()];
+        hiddenWord = Utilities.hideWord(word.getWord());
         System.out.print(Arrays.toString(hiddenWord));
-        Utilities.hideWord(word.getWord());
+        /*Utilities.hideWord(word.getWord());
         System.out.print(Arrays.toString(hiddenWord));
         IsPrinting.text(2);
-        User.isSelectletter();
+        User.isSelectletter();*/
 
         int[] letterPosition = IsWorking.checkPositionLetter(word.getWord(), chosenLetter);
 

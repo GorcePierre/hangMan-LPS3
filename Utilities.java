@@ -7,10 +7,12 @@ public class Utilities {
     public static String[] hideWord(String word) {
         String[] hiddenWord = new String [word.length()];
         int i = 0;
-        for(String letter: hiddenWord) {
-            hiddenWord[i] = "_";
+        for(String letter : hiddenWord) {
+            hiddenWord[i] = new String("_");
             i++;
         }
+
+
         return  hiddenWord;
     }
 
@@ -19,7 +21,7 @@ public class Utilities {
         System.out.flush();
     }
 
-    
+
 }
 /**
  * Creating  with <3 by LPS3 14/10/2018
