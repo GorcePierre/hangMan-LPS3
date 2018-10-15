@@ -13,23 +13,23 @@ public class HangMan {
 
         boolean isVictory = false;
         String chosenLetter = "";
-        String word = "";
+        Word word = new Word("");
 
-        User.isSelectWord();
+        word.setWord(User.isSelectWord());
         System.out.print(word);
         Utilities.clearScreen();
-        String[] hiddenWord = new String[word.length()];
+        String[] hiddenWord = new String[word.getWord().length()];
         System.out.print(Arrays.toString(hiddenWord));
-        Utilities.hideWord(word);
+        Utilities.hideWord(word.getWord());
         System.out.print(Arrays.toString(hiddenWord));
         IsPrinting.text(2);
         User.isSelectletter();
 
-        int[] letterPosition = IsWorking.checkPositionLetter(word, chosenLetter);
+        int[] letterPosition = IsWorking.checkPositionLetter(word.getWord(), chosenLetter);
 
         IsWorking.replaceLetter(letterPosition, chosenLetter, hiddenWord);
-        
-        System.out.println(IsWorking.setVIctory(hiddenWord, word));
+
+        System.out.println(IsWorking.setVIctory(hiddenWord, word.getWord()));
         System.out.println("ok");
 
         HangManTest.printTest();
