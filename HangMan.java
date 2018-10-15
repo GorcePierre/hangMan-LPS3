@@ -10,12 +10,14 @@ public class HangMan {
 
         IsPrinting.text(0);
         IsPrinting.text(1);
+        int maxLength = User.chooseMaxLength();
+        IsPrinting.text(2);
 
         boolean isVictory = false;
         String chosenLetter = "";
         Word word = new Word("");
 
-        word.setWord(User.isSelectWord());
+        word.setWord(User.isSelectWord(maxLength));
         System.out.print(word);
         Utilities.clearScreen();
         String[] hiddenWord = new String[word.getWord().length()];
@@ -23,7 +25,7 @@ public class HangMan {
         System.out.print(Arrays.toString(hiddenWord));
         Utilities.hideWord(word.getWord());
         System.out.print(Arrays.toString(hiddenWord));
-        IsPrinting.text(2);
+        IsPrinting.text(3);
         User.isSelectletter();
 
         int[] letterPosition = IsWorking.checkPositionLetter(word.getWord(), chosenLetter);
