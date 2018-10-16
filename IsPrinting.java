@@ -5,6 +5,7 @@ public class IsPrinting {
 
     static String[] data = { 
                                 "WELCOME TO HANGMAN", 
+                                "Entrez le nombre maximum de lettres",
                                 "Joueur1, entrez un mot: ", 
                                 "Joueur2, entrez une lettre: ", 
                                 null };

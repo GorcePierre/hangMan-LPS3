@@ -1,46 +1,47 @@
 import java.util.Arrays;
+
 /**
  * HangMan
  */
 public class HangMan {
 
     public static void main(String[] args) {
+<<<<<<< HEAD
       // modif laurent
         Utilities.clearScreen();
+=======
+>>>>>>> master
 
         IsPrinting.text(0);
         IsPrinting.text(1);
+        int maxLength = User.chooseMaxLength();
+        IsPrinting.text(2);
 
         boolean isVictory = false;
-        String chosenLetter = "";
-        Word word = new Word("");
+        Word word = new Word();
 
-        word.setWord(User.isSelectWord());
-        System.out.print(word);
-        Utilities.clearScreen();
-        String[] hiddenWord = new String[word.getWord().length()];
-        hiddenWord = Utilities.hideWord(word.getWord());
-        System.out.print(Arrays.toString(hiddenWord));
-        Utilities.hideWord(word.getWord());
-        System.out.print(Arrays.toString(hiddenWord));
-        IsPrinting.text(2);
-        User.isSelectletter();
+        word.setWord(User.isSelectWord(maxLength));
 
-        int[] letterPosition = IsWorking.checkPositionLetter(word.getWord(), chosenLetter);
+        String wordToFind = word.getWord();
+        String[] hiddenWord = new String[wordToFind.length()];
 
-        IsWorking.replaceLetter(letterPosition, chosenLetter, hiddenWord);
+        hiddenWord = Word.hideWord(wordToFind);
+        
 
-        System.out.println(IsWorking.setVIctory(hiddenWord, word.getWord()));
+        while (!isVictory){
+            IsPrinting.text(3);
+            String chosenLetter = User.isSelectletter();
+            int[] letterPosition = IsWorking.checkPositionLetter(wordToFind, chosenLetter);
+            String[] foundLetters = IsWorking.replaceLetter(letterPosition, chosenLetter, hiddenWord);
+            isVictory = IsWorking.setVIctory(foundLetters, wordToFind);
+
+        };
+
+        System.out.println("le player 2 a gagné");
         System.out.println("ok");
-
-        HangManTest.printTest();
-        HangManTest.checkPositionLetterTest();
-        HangManTest.replaceLetterTest();
-        HangManTest.setVictoryTest();
-        HangManTest.hideWordTest();
     }
 
 }
 /**
- * Creating  wiht <3 by LPS3 14/10/2018
+ * Creating wiht <3 by LPS3 14/10/2018
  */

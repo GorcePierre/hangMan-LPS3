@@ -56,12 +56,12 @@ public class HangManTest {
      */
 
     /**
-     * Utilities test.
+     * Word test.
      */
     public static void hideWordTest() {
         String[] hiddenWord = {"_","_","_","_","_"};
 
-        assertEquals("--> HIDE WORD",hiddenWord,Utilities.hideWord("arbre"));
+        assertEquals("--> HIDE WORD",hiddenWord,Word.hideWord("arbre"));
     }    
     /**
      * Testing functions.
