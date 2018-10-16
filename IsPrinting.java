@@ -3,7 +3,7 @@
  */
 public class IsPrinting {
 
-    static String[] data = {
+    static String[] data = {    "\n----------------------\n| WELCOME TO HANGMAN |\n----------------------\n",
                                 "Entrez le nombre maximum de lettres",
                                 "Joueur1, entrez un mot: ",
                                 "Joueur2, entrez une lettre: ",
@@ -17,7 +17,7 @@ public class IsPrinting {
     }
 
     public static String title(){
-      String editedText = "\n----------------------\n| WELCOME TO HANGMAN |\n----------------------\n";
+      String editedText = data[0];
       System.out.println(editedText);
       return editedText;
     }
