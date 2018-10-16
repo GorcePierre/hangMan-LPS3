@@ -49,3 +49,11 @@ carefull about named variable.
   make a report about working branch and tracked files.
   
   $ git status
+  
+### make a pull request
+
+  all yours push method wiil be blocked on master.
+  
+  you must go on your github and create a pull request.
+  
+  create a tittle explain your task and comment it.
