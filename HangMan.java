@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * HangMan
+ * HangMan.java
  */
 public class HangMan {
 
