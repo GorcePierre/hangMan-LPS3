@@ -6,6 +6,11 @@ import java.util.Arrays;
 public class HangMan {
 
     public static void main(String[] args) {
+<<<<<<< HEAD
+      // modif laurent
+        Utilities.clearScreen();
+=======
+>>>>>>> master
 
         IsPrinting.text(0);
         IsPrinting.text(1);
