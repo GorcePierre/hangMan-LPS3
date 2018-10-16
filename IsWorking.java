@@ -33,9 +33,9 @@ public class IsWorking {
 
     public static boolean setVIctory(String[] hiddenWord, String word) {
 
-        String isStringHiddenWord = String.join("", hiddenWord);
-        System.out.println("etape 6 :" + word +" "+ isStringHiddenWord);
-        if (isStringHiddenWord.equals(word)) {
+        String isStringFoundWord = String.join("", hiddenWord);
+        System.out.println("le mot caché est : "+ isStringFoundWord);
+        if (isStringFoundWord.equals(word)) {
             return true;
         }
         return false;

@@ -21,32 +21,19 @@ public class HangMan {
         String[] hiddenWord = new String[wordToFind.length()];
 
         hiddenWord = Word.hideWord(wordToFind);
-        System.out.println("etape 1.1: " + Arrays.toString(hiddenWord));
         
 
         while (!isVictory){
             IsPrinting.text(3);
             String chosenLetter = User.isSelectletter();
-            System.out.println("etape 1: " + chosenLetter);
             int[] letterPosition = IsWorking.checkPositionLetter(wordToFind, chosenLetter);
-            System.out.println("etape 2: "+ Arrays.toString(letterPosition));
             String[] foundLetters = IsWorking.replaceLetter(letterPosition, chosenLetter, hiddenWord);
-            System.out.println("etape 3: " + chosenLetter);
             isVictory = IsWorking.setVIctory(foundLetters, wordToFind);
-            System.out.println("etape 4: " + wordToFind);
-            System.out.println("etape 5: " +Arrays.toString(foundLetters));
-            System.out.println(isVictory);
 
         };
 
-        System.out.println("la partie est terminée");
+        System.out.println("le player 2 a gagné");
         System.out.println("ok");
-
-        HangManTest.printTest();
-        HangManTest.checkPositionLetterTest();
-        HangManTest.replaceLetterTest();
-        HangManTest.setVictoryTest();
-        HangManTest.hideWordTest();
     }
 
 }
