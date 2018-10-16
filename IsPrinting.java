@@ -3,11 +3,10 @@
  */
 public class IsPrinting {
 
-    static String[] data = { 
-                                "WELCOME TO HANGMAN", 
+    static String[] data = {
                                 "Entrez le nombre maximum de lettres",
-                                "Joueur1, entrez un mot: ", 
-                                "Joueur2, entrez une lettre: ", 
+                                "Joueur1, entrez un mot: ",
+                                "Joueur2, entrez une lettre: ",
                                 null };
 
     public static String text(int index) {
@@ -15,6 +14,12 @@ public class IsPrinting {
         editedText = data[index];
         System.out.println(editedText);
         return editedText;
+    }
+
+    public static String title(){
+      String editedText = "\n----------------------\n| WELCOME TO HANGMAN |\n----------------------\n";
+      System.out.println(editedText);
+      return editedText;
     }
 }
 /**
