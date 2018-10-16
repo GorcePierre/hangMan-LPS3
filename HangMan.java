@@ -6,7 +6,6 @@ import java.util.Arrays;
 public class HangMan {
 
     public static void main(String[] args) {
-
         IsPrinting.text(0);
         IsPrinting.text(1);
         int maxLength = User.chooseMaxLength();
