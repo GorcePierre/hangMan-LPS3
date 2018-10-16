@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * HangMan
+ * HangMan.java
  */
 public class HangMan {
 
@@ -20,7 +20,7 @@ public class HangMan {
         String[] hiddenWord = new String[wordToFind.length()];
 
         hiddenWord = Word.hideWord(wordToFind);
-        
+
 
         while (!isVictory){
             IsPrinting.text(3);
