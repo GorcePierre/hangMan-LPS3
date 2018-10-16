@@ -32,7 +32,11 @@ carefull about named variable.
   
   $ git clone url
   
-  deplace in the new folder
+  deplace in the new folder and go to branch dev.
+
+  $ cd hangMan-LPS3
+
+  $ git checkout dev.
   
   create a branch.
   
