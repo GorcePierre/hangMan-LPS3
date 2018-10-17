@@ -1,6 +1,8 @@
 /**
  * IsPrinting
  */
+import java.util.Hashtable;
+
 public class IsPrinting {
 
     static String[] data = {    "\n----------------------\n| WELCOME TO HANGMAN |\n----------------------\n",
