@@ -6,10 +6,10 @@ import java.util.Arrays;
 public class HangMan {
 
     public static void main(String[] args) {
-        IsPrinting.text(0);
-        IsPrinting.text(1);
+        IsPrinting.text("title");
+        IsPrinting.text("userMaxLetter");
         int maxLength = User.chooseMaxLength();
-        IsPrinting.text(2);
+        IsPrinting.text("playerOne");
 
         boolean isVictory = false;
         Word word = new Word();
@@ -23,7 +23,7 @@ public class HangMan {
 
 
         while (!isVictory){
-            IsPrinting.text(3);
+            IsPrinting.text("playerTwo");
             String chosenLetter = User.isSelectletter();
             int[] letterPosition = IsWorking.checkPositionLetter(wordToFind, chosenLetter);
             String[] foundLetters = IsWorking.replaceLetter(letterPosition, chosenLetter, hiddenWord);
@@ -31,8 +31,7 @@ public class HangMan {
 
         };
 
-        System.out.println("le player 2 a gagné");
-        System.out.println("ok");
+        IsPrinting.text("win");
     }
 
 }
