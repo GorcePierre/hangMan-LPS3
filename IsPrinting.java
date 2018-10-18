@@ -26,7 +26,7 @@ public class IsPrinting {
 }
 
 //mon changement : remplacer la premiere class par celle ci et dans le main changer IsPrinting(0) par IsPrinting("title")
-public class IsPrinting(String word){
+/* public class IsPrinting(String word){
   Hashtable<String, String> sentence = new Hashtable<String, String>();
   sentence.put("title", "\n----------------------\n| WELCOME TO HANGMAN |\n----------------------\n");
   sentence.put("userMaxLetter", "Entrez le nombre maximum de lettres");
@@ -34,7 +34,7 @@ public class IsPrinting(String word){
   sentence.put("playerTwo", "Joueur2, entrez une lettre: ");
   System.out.println(sentence.get(word));
   return sentence.get(word);
-}
+} */
 
 /**
  * Creating with <3 by LPS3 14/10/2018
