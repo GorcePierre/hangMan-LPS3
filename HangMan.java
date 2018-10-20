@@ -26,9 +26,9 @@ public class HangMan {
         while (!isVictory) {
             IsPrinting.text("playerTwo");
             String chosenLetter = User.isSelectletter();
-            int[] letterPosition = IsWorking.checkPositionLetter(wordToFind, chosenLetter);
-            String[] foundLetters = IsWorking.replaceLetter(letterPosition, chosenLetter, hiddenWord);
-            isVictory = IsWorking.setVIctory(foundLetters, wordToFind,tryHit);
+            int[] letterPosition = Word.checkPositionLetter(wordToFind, chosenLetter);
+            String[] foundLetters = Word.replaceLetter(letterPosition, chosenLetter, hiddenWord);
+            isVictory = Word.setVIctory(foundLetters, wordToFind,tryHit);
             tryHit ++;  
 
         }
