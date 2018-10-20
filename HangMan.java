@@ -29,13 +29,14 @@ public class HangMan {
             int[] letterPosition = IsWorking.checkPositionLetter(wordToFind, chosenLetter);
             String[] foundLetters = IsWorking.replaceLetter(letterPosition, chosenLetter, hiddenWord);
             isVictory = IsWorking.setVIctory(foundLetters, wordToFind,tryHit);
-            tryHit ++;
-            System.out.println(tryHit);
+            tryHit ++;  
 
         }
         
-
-        IsPrinting.text("win");
+        if(tryHit == 7){
+            IsPrinting.text("win2");
+        } else IsPrinting.text("win1");
+        
 
         HangManTest.hideWordTest();
         HangManTest.printTest();
