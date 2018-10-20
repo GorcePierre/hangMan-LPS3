@@ -10,7 +10,13 @@ develop with tdd.
 
 step by step game.
 
-add animations. 
+add animations.
+
+#### todo
+
+victory conditions.
+
+input error.
 
 ### Use git to training.
 
