@@ -21,17 +21,27 @@ public class HangMan {
 
         hiddenWord = Word.hideWord(wordToFind);
 
+        int tryHit = 1;
 
-        while (!isVictory){
+        while (!isVictory) {
             IsPrinting.text("playerTwo");
             String chosenLetter = User.isSelectletter();
             int[] letterPosition = IsWorking.checkPositionLetter(wordToFind, chosenLetter);
             String[] foundLetters = IsWorking.replaceLetter(letterPosition, chosenLetter, hiddenWord);
-            isVictory = IsWorking.setVIctory(foundLetters, wordToFind);
+            isVictory = IsWorking.setVIctory(foundLetters, wordToFind,tryHit);
+            tryHit ++;
+            System.out.println(tryHit);
 
-        };
+        }
+        
 
         IsPrinting.text("win");
+
+        HangManTest.hideWordTest();
+        HangManTest.printTest();
+        HangManTest.replaceLetterTest();
+        HangManTest.checkPositionLetterTest();
+        HangManTest.setVictoryTest();
     }
 
 }

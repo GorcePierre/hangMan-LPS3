@@ -31,14 +31,20 @@ public class IsWorking {
         return hiddenWord;
     }
 
-    public static boolean setVIctory(String[] hiddenWord, String word) {
+    public static boolean setVIctory(String[] hiddenWord, String word,int tryNum) {
+        if (tryNum < 7) {
+            String isStringFoundWord = String.join("", hiddenWord);
+            System.out.println("le mot caché est : " + isStringFoundWord);
+            System.out.println("il reste " + (7 - (tryNum)) + " tentative(s)");
 
-        String isStringFoundWord = String.join("", hiddenWord);
-        System.out.println("le mot caché est : "+ isStringFoundWord);
-        if (isStringFoundWord.equals(word)) {
-            return true;
+            if (isStringFoundWord.equals(word)) {
+                return true;
+            } else {
+                return false;
+            }
         }
-        return false;
+
+        return true;
     }
 }
 /**
