@@ -9,8 +9,7 @@ public class HangManTest {
      */
 
     public static void printTest() {
-        int index = 0;
-        assertEquals(" --> PRINTED TEXT", "WELCOME TO HANGMAN", IsPrinting.text(index));
+        assertEquals(" --> PRINTED TEXT", "Joueur1, entrez un mot: ", IsPrinting.text("playerOne"));
 
     }
 
@@ -47,7 +46,7 @@ public class HangManTest {
 
     public static void setVictoryTest() {
 
-        assertFalse("--> SET VICTORY", false);
+        //assertTrue("--> SET VICTORY", Word.setVictory());
         
     }
 
@@ -55,14 +54,16 @@ public class HangManTest {
      * User test.
      */
 
+
+
     /**
      * Word test.
      */
     public static void hideWordTest() {
-        String[] hiddenWord = {"_","_","_","_","_"};
+        String[] hiddenWord = {"_ ","_ ","_ ","_ ","_ "};
 
         assertEquals("--> HIDE WORD",hiddenWord,Word.hideWord("arbre"));
-    }    
+    }
     /**
      * Testing functions.
      */
