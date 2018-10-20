@@ -2,6 +2,8 @@
 
 ## HANGMAN GAME made by LPS3
 
+master update 20/10/2018.
+
 ### Create a game.
 
 make a two players game.
