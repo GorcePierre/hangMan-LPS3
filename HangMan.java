@@ -28,15 +28,15 @@ public class HangMan {
             String chosenLetter = User.isSelectletter();
             int[] letterPosition = Word.checkPositionLetter(wordToFind, chosenLetter);
             String[] foundLetters = Word.replaceLetter(letterPosition, chosenLetter, hiddenWord);
-            isVictory = Word.setVIctory(foundLetters, wordToFind,tryHit);
-            tryHit ++;  
+            isVictory = Word.setVIctory(foundLetters, wordToFind, tryHit);
+            tryHit++;
 
         }
-        
-        if(tryHit == 7){
+
+        if (tryHit == 7) {
             IsPrinting.text("win2");
-        } else IsPrinting.text("win1");
-        
+        } else
+            IsPrinting.text("win1");
 
         HangManTest.hideWordTest();
         HangManTest.printTest();

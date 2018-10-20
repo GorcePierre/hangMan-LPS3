@@ -9,11 +9,7 @@ public class HangManTest {
      */
 
     public static void printTest() {
-<<<<<<< HEAD
         assertEquals(" --> PRINTED TEXT", "Joueur 1, entrez un mot: ", IsPrinting.text("playerOne"));
-=======
-        assertEquals(" --> PRINTED TEXT", "Joueur1, entrez un mot: ", IsPrinting.text("playerOne"));
->>>>>>> conditionsVictory
 
     }
 
