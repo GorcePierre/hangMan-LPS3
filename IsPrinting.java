@@ -38,7 +38,7 @@ public class IsPrinting {
     for (int i = 0; i < word.length(); i++) {
       System.out.print(word.charAt(i));
       try {
-        Thread.sleep(20); // 20 milliseconds pause between each letter display.
+        Thread.sleep(30); // 20 milliseconds pause between each letter display.
       } catch (InterruptedException ie) {
         ie.printStackTrace();
       }

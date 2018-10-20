@@ -5,19 +5,19 @@ import java.util.List;
 public class Word {
   private String word;
 
-  public Word(String word){
-    this.word = new String (word);
+  public Word(String word) {
+    this.word = new String(word);
   }
 
-  public Word(){
+  public Word() {
     this.word = new String("");
   }
 
-  public void setWord(String word){
+  public void setWord(String word) {
     this.word = word;
   }
 
-  public String getWord(){
+  public String getWord() {
     return this.word;
   }
 
