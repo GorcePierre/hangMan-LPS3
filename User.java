@@ -12,7 +12,7 @@ public class User {
     public static String isSelectWord(int maxLength) {
         String word = input.nextLine();
         while(word.length() > maxLength) {
-        	System.out.println("le mot ne doit pas depasser " + maxLength + " lettres");
+        	System.out.println("                    le mot ne doit pas depasser " + maxLength + " lettres");
             word = input.nextLine();
         }
         return word;

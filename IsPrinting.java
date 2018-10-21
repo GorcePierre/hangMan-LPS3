@@ -11,22 +11,20 @@ import java.util.Scanner;
 import java.util.Hashtable;
 import java.util.Arrays;
 import java.util.ArrayList;
-import java.io.FileNotFoundException;;
+import java.io.FileNotFoundException;
 
 public class IsPrinting {
 
-  static String[] data = { "\n----------------------\n| WELCOME TO HANGMAN |\n----------------------\n",
-      "Entrez le nombre maximum de lettres: ", "Joueur1, entrez un mot: ", "Joueur2, entrez une lettre: ",
-      "\n---------------------------\nBravo ! Vous avez gagné !!\n---------------------------\n" };
-
-  static String[] title = { "title", "userMaxLetter", "playerOne", "playerTwo", "win" };
+  static String[] title = { "title", "userMaxLetter", "playerOne", "playerTwo", "win1","win2" };
 
   // Method that displays and returns a sentence and that takes in parameter a
   // word.
-  static String text(String word) {
+  static String text(String word) throws FileNotFoundException {
+    String[] data = ReadContents();
     Hashtable<String, String> sentence = new Hashtable<String, String>();
 
     for (int i = 0; i < data.length; i++) {
+      //System.out.print(data[i]);
       sentence.put(title[i], data[i]);
     }
     slowWriting(sentence.get(word));
@@ -45,38 +43,29 @@ public class IsPrinting {
     }
   }
 
-  // read .txt files , fetch data & title
+  // read .txt files , fetch content & title
 
-  public static void ReadContents() throws FileNotFoundException {
+  public static String[] ReadContents() throws FileNotFoundException {
 
     try {
-      // create token1
       String token1 = "";
-
-      // create Scanner inFile1
-      Scanner contents = new Scanner(new File("contentsIsprinting.txt")).useDelimiter(",");
-
-      // List<String> temps = new LinkedList<String>();
+      Scanner contents = new Scanner(new File("contentsIsPrinting.txt")).useDelimiter(", ");
       List<String> contentsArrayList = new ArrayList<String>();
 
       while (contents.hasNext()) {
-        // find next line
         token1 = contents.next();
         contentsArrayList.add(token1);
       }
       contents.close();
 
-      System.out.println(contentsArrayList);
       String[] contentsArray = contentsArrayList.toArray(new String[0]);
-      System.out.println(Arrays.toString(contentsArray));
-
-      for (String s : contentsArray) {
-        System.out.println(s);
-      }
+      return contentsArray;
 
     } catch (FileNotFoundException ex) {
-      ex.fillInStackTrace();
+      System.out.println(ex.fillInStackTrace());
     }
+    String[] erreur = { "erreur", "stop" };
+    return erreur;
   }
 }
 

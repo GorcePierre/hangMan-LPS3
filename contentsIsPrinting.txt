@@ -1,6 +1,9 @@
-{    "\n----------------------\n| WELCOME TO HANGMAN |\n----------------------\n",
-                                "Entrez le nombre maximum de lettres: ",
-                                "Joueur1, entrez un mot: ",
-                                "Joueur2, entrez une lettre: ",
-                                "\n---------------------------\nBravo ! Vous avez gagné !!\n---------------------------\n"
-                                };
+                     ____________________
+                    | WELCOME TO HANGMAN |
+                    |____________________|
+, 
+                Entrez le nombre maximum de lettres: , 
+                Joueur 1 entrez un mot: , 
+                Joueur 2 entrez une lettre: , 
+                Bravo Joueur1 ! Vous avez gagné !!, 
+                Bravo Joueur2 ! Vous avez gagné !!

@@ -7,7 +7,6 @@ import java.io.FileNotFoundException;
 public class HangMan {
 
     public static void main(String[] args) throws FileNotFoundException {
-        IsPrinting.ReadContents();
         IsPrinting.text("title");
         IsPrinting.text("userMaxLetter");
         int maxLength = User.chooseMaxLength();
@@ -30,14 +29,15 @@ public class HangMan {
             String chosenLetter = User.isSelectletter();
             int[] letterPosition = IsWorking.checkPositionLetter(wordToFind, chosenLetter);
             String[] foundLetters = IsWorking.replaceLetter(letterPosition, chosenLetter, hiddenWord);
-            isVictory = IsWorking.setVIctory(foundLetters, wordToFind,tryHit);
-            tryHit ++;
-            System.out.println(tryHit);
+            isVictory = IsWorking.setVIctory(foundLetters, wordToFind, tryHit);
+            tryHit++;
 
         }
-        
 
-        IsPrinting.text("win");
+        if (tryHit < 7) {
+            IsPrinting.text("win2");
+        } else
+            IsPrinting.text("win1");
 
         HangManTest.hideWordTest();
         HangManTest.printTest();
