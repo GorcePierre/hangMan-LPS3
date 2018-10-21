@@ -1,11 +1,13 @@
 import java.util.Arrays;
+import java.io.FileNotFoundException;
 
 /**
  * HangMan
  */
 public class HangMan {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+        IsPrinting.ReadContents();
         IsPrinting.text("title");
         IsPrinting.text("userMaxLetter");
         int maxLength = User.chooseMaxLength();
