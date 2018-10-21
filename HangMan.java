@@ -33,7 +33,7 @@ public class HangMan {
 
         }
 
-        if (tryHit == 7) {
+        if (tryHit < 7) {
             IsPrinting.text("win2");
         } else
             IsPrinting.text("win1");
