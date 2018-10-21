@@ -51,16 +51,13 @@ public class IsPrinting {
       String token1 = "";
       Scanner contents = new Scanner(new File("contentsIsPrinting.txt")).useDelimiter(", ");
       List<String> contentsArrayList = new ArrayList<String>();
-
       while (contents.hasNext()) {
         token1 = contents.next();
         contentsArrayList.add(token1);
       }
       contents.close();
-
       String[] contentsArray = contentsArrayList.toArray(new String[0]);
       return contentsArray;
-
     } catch (FileNotFoundException ex) {
       System.out.println(ex.fillInStackTrace());
     }
