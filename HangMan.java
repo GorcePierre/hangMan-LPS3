@@ -8,6 +8,8 @@ public class HangMan {
 
     public static void main(String[] args) throws FileNotFoundException {
         IsPrinting.text("title");
+        IsPrinting.text("modeToPlay");
+        //Ici un if pour le mode de jeu choisi...
         IsPrinting.text("userMaxLetter");
         int maxLength = User.chooseMaxLength();
         IsPrinting.text("playerOne");

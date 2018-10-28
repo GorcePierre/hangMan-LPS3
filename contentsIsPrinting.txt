@@ -1,9 +1,10 @@
                      ____________________
                     | WELCOME TO HANGMAN |
                     |____________________|
-, 
-                Entrez le nombre maximum de lettres: , 
-                Joueur 1 entrez un mot: , 
-                Joueur 2 entrez une lettre: , 
-                Bravo Joueur1 ! Vous avez gagné !!, 
+,
+                Entrez le nombre maximum de lettres: ,
+                Veuillez choisir un mode de jeu.. Solo (S) ou Multijoueur (M) : , 
+                Joueur 1 entrez un mot: ,
+                Joueur 2 entrez une lettre: ,
+                Bravo Joueur1 ! Vous avez gagné !!,
                 Bravo Joueur2 ! Vous avez gagné !!

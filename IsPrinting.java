@@ -15,7 +15,7 @@ import java.io.FileNotFoundException;
 
 public class IsPrinting {
 
-  static String[] title = { "title", "userMaxLetter", "playerOne", "playerTwo", "win1","win2" };
+  static String[] title = { "title", "modeToPlay", "userMaxLetter", "playerOne", "playerTwo", "win1", "win2" };
 
   // Method that displays and returns a sentence and that takes in parameter a
   // word.
