@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.io.FileNotFoundException;
 
 /**
  * User
@@ -10,11 +11,12 @@ public class User {
 
     static Scanner input = new Scanner(System.in);
 
-    public static char choiceModeGame(){
-      char letter = input.nextLine().charAt(0);
+    public static char choiceModeGame() throws FileNotFoundException{
+      char letter = ' ';
       do {
         IsPrinting.text("modeToPlay");
-      } while (letter != 'S' || letter != 'M');
+        letter = input.nextLine().toUpperCase().charAt(0);
+      } while (letter != 'S' && letter != 'M');
       return letter;
     }
 

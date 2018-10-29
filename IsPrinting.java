@@ -15,7 +15,7 @@ import java.io.FileNotFoundException;
 
 public class IsPrinting {
 
-  static String[] title = { "title", "modeToPlay", "userMaxLetter", "playerOne", "playerTwo", "win1", "win2" };
+  static String[] title = { "title", "userMaxLetter", "modeToPlay", "playerOne", "playerTwo", "win1", "win2" };
 
   // Method that displays and returns a sentence and that takes in parameter a
   // word.
@@ -49,7 +49,7 @@ public class IsPrinting {
 
     try {
       String token1 = "";
-      Scanner contents = new Scanner(new File("contentsIsPrinting.txt")).useDelimiter(",*");
+      Scanner contents = new Scanner(new File("contentsIsPrinting.txt")).useDelimiter("/");
       List<String> contentsArrayList = new ArrayList<String>();
       while (contents.hasNext()) {
         token1 = contents.next();
