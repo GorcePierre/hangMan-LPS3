@@ -49,7 +49,7 @@ public class IsPrinting {
 
     try {
       String token1 = "";
-      Scanner contents = new Scanner(new File("contentsIsPrinting.txt")).useDelimiter(", ");
+      Scanner contents = new Scanner(new File("contentsIsPrinting.txt")).useDelimiter(",*");
       List<String> contentsArrayList = new ArrayList<String>();
       while (contents.hasNext()) {
         token1 = contents.next();
