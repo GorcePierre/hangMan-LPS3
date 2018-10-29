@@ -10,6 +10,14 @@ public class User {
 
     static Scanner input = new Scanner(System.in);
 
+    public static char choiceModeGame(){
+      char letter = input.nextLine().charAt(0);
+      do {
+        IsPrinting.text("modeToPlay");
+      } while (letter != 'S' || letter != 'M');
+      return letter;
+    }
+
     public static String isSelectWord(int maxLength) {
         String word = input.nextLine();
         while(word.length() > maxLength) {
