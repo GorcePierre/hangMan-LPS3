@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.io.FileNotFoundException;
 
 /**
  * User
@@ -9,6 +10,15 @@ import java.util.Scanner;
 public class User {
 
     static Scanner input = new Scanner(System.in);
+
+    public static char choiceModeGame() throws FileNotFoundException{
+      char letter = ' ';
+      do {
+        IsPrinting.text("modeToPlay");
+        letter = input.nextLine().toUpperCase().charAt(0);
+      } while (letter != 'S' && letter != 'M');
+      return letter;
+    }
 
     public static String isSelectWord(int maxLength) {
         String word = input.nextLine();
@@ -25,7 +35,7 @@ public class User {
             System.out.println("Merci de saisir un seul caractere: ");
             ChosenLetter = input.nextLine();
         }
-        return ChosenLetter;
+        return ChosenLetter.toUpperCase();
     }
 
     public static int chooseMaxLength() {

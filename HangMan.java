@@ -7,18 +7,10 @@ import java.io.FileNotFoundException;
 public class HangMan {
 
     public static void main(String[] args) throws FileNotFoundException {
-        IsPrinting.text("modeToPlay");
-        //Ici un if pour le mode de jeu choisi...
-        IsPrinting.text("userMaxLetter");
-        int maxLength = User.chooseMaxLength();
-        IsPrinting.text("playerOne");
-
+        IsPrinting.text("title");
+        char letterChoiceMode = User.choiceModeGame();
         boolean isVictory = false;
-        Word word = new Word();
-
-        word.setWord(User.isSelectWord(maxLength));
-
-        String wordToFind = word.getWord();
+        String wordToFind = IsWorking.logicMode(letterChoiceMode);
         String[] hiddenWord = new String[wordToFind.length()];
 
         hiddenWord = Word.hideWord(wordToFind);
