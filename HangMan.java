@@ -1,4 +1,8 @@
 import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 /**
  * HangMan
@@ -25,7 +29,13 @@ public class HangMan {
             tryHit++;
 
         }
-
+        try {
+			IsWorking.bruitage("victory");
+		} catch (LineUnavailableException | UnsupportedAudioFileException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
         if (tryHit < 7) {
             IsPrinting.text("win2");
         } else

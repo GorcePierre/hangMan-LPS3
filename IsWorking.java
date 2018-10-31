@@ -1,7 +1,15 @@
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 /**
  * IsWorking
@@ -68,6 +76,28 @@ public class IsWorking {
         }
 
         return true;
+    }
+    
+    public static void bruitage(String occasion) throws LineUnavailableException, UnsupportedAudioFileException, IOException {
+  	 
+    	if (occasion == "victory") {
+  		  URL url = new URL(
+  		            "file://victoire.wav");
+  		        Clip clip = AudioSystem.getClip();
+  		        AudioInputStream ais = AudioSystem.
+                  getAudioInputStream( url );
+              clip.open(ais);
+  		        clip.start();
+    	}
+    	else if (occasion == "perdu") {
+  		  URL url = new URL(
+  		            "file:///home/david/Téléchargements/3731.wav");
+  		        Clip clip = AudioSystem.getClip();
+  		        AudioInputStream ais = AudioSystem.
+  		            getAudioInputStream( url );
+  		        clip.open(ais);
+  		        clip.start();
+  	  	}
     }
 }
 /**
