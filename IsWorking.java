@@ -1,11 +1,33 @@
-import java.util.Arrays;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * IsWorking
  */
-public class IsWorking {
+public class IsWorking { 
+
+    public static String randomWord() {
+  		String[] listWords = {"ABLATION","HYPOCRISIE","INTERMINABLE","REVOLUTION","ERUDIT","ACCUEIL","EXPLOSION","RELIURE","PETIT","PIQUET","SIMPLON","BIERE"};
+  		int randomNumber = new Random().nextInt(listWords.length);
+      System.out.println(randomNumber);
+  		return listWords[randomNumber];
+    }
+
+    public static String logicMode(char letter) throws FileNotFoundException{
+      Word word = new Word();
+      if (letter == 'S') {
+        word.setWord(randomWord());
+      }
+      else {
+        IsPrinting.text("userMaxLetter");
+        int maxLength = User.chooseMaxLength();
+        IsPrinting.text("playerOne");
+        word.setWord(User.isSelectWord(maxLength));
+      }
+      return word.getWord();
+    }
 
     public static int[] checkPositionLetter(String word, String letter) {
         int index = 0;
@@ -31,14 +53,21 @@ public class IsWorking {
         return hiddenWord;
     }
 
-    public static boolean setVIctory(String[] hiddenWord, String word) {
 
-        String isStringHiddenWord = String.join("", hiddenWord);
-        System.out.println("etape 6 :" + word +" "+ isStringHiddenWord);
-        if (isStringHiddenWord.equals(word)) {
-            return true;
+    public static boolean setVIctory(String[] hiddenWord, String word,int tryNum) {
+        if (tryNum < 7) {
+            String isStringFoundWord = String.join("", hiddenWord);
+            System.out.println("            le mot caché est : " + isStringFoundWord);
+            System.out.println("            il reste " + (7 - (tryNum)) + " tentative(s)");
+            if (isStringFoundWord.equals(word)) {
+                return true;
+            } else {
+                return false;
+            }
+
         }
-        return false;
+
+        return true;
     }
 }
 /**

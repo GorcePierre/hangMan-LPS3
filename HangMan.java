@@ -1,52 +1,41 @@
-import java.util.Arrays;
+import java.io.FileNotFoundException;
 
 /**
  * HangMan
  */
 public class HangMan {
 
-    public static void main(String[] args) {
-
-        IsPrinting.text(0);
-        IsPrinting.text(1);
-        int maxLength = User.chooseMaxLength();
-        IsPrinting.text(2);
-
+    public static void main(String[] args) throws FileNotFoundException {
+        IsPrinting.text("title");
+        char letterChoiceMode = User.choiceModeGame();
         boolean isVictory = false;
-        Word word = new Word();
-
-        word.setWord(User.isSelectWord(maxLength));
-
-        String wordToFind = word.getWord();
+        String wordToFind = IsWorking.logicMode(letterChoiceMode);
         String[] hiddenWord = new String[wordToFind.length()];
 
         hiddenWord = Word.hideWord(wordToFind);
-        System.out.println("etape 1.1: " + Arrays.toString(hiddenWord));
-        
 
-        while (!isVictory){
-            IsPrinting.text(3);
+        int tryHit = 1;
+
+        while (!isVictory) {
+            IsPrinting.text("playerTwo");
             String chosenLetter = User.isSelectletter();
-            System.out.println("etape 1: " + chosenLetter);
-            int[] letterPosition = IsWorking.checkPositionLetter(wordToFind, chosenLetter);
-            System.out.println("etape 2: "+ Arrays.toString(letterPosition));
-            String[] foundLetters = IsWorking.replaceLetter(letterPosition, chosenLetter, hiddenWord);
-            System.out.println("etape 3: " + chosenLetter);
-            isVictory = IsWorking.setVIctory(foundLetters, wordToFind);
-            System.out.println("etape 4: " + wordToFind);
-            System.out.println("etape 5: " +Arrays.toString(foundLetters));
-            System.out.println(isVictory);
+            int[] letterPosition = Word.checkPositionLetter(wordToFind, chosenLetter);
+            String[] foundLetters = Word.replaceLetter(letterPosition, chosenLetter, hiddenWord);
+            isVictory = Word.setVIctory(foundLetters, wordToFind, tryHit);
+            tryHit++;
 
-        };
+        }
 
-        System.out.println("la partie est terminée");
-        System.out.println("ok");
+        if (tryHit < 7) {
+            IsPrinting.text("win2");
+        } else
+            IsPrinting.text("win1");
 
-        HangManTest.printTest();
-        HangManTest.checkPositionLetterTest();
-        HangManTest.replaceLetterTest();
-        HangManTest.setVictoryTest();
         HangManTest.hideWordTest();
+        HangManTest.printTest();
+        HangManTest.replaceLetterTest();
+        HangManTest.checkPositionLetterTest();
+        HangManTest.setVictoryTest();
     }
 
 }
