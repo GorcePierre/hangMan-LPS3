@@ -10,6 +10,12 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 public class HangMan {
 
     public static void main(String[] args) throws FileNotFoundException {
+        try {
+			IsWorking.bruitage("title");
+		} catch (LineUnavailableException | UnsupportedAudioFileException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         IsPrinting.text("title");
         char letterChoiceMode = User.choiceModeGame();
         boolean isVictory = false;
@@ -40,6 +46,14 @@ public class HangMan {
             IsPrinting.text("win2");
         } else
             IsPrinting.text("win1");
+        
+
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
         HangManTest.hideWordTest();
         HangManTest.printTest();

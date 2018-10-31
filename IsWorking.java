@@ -80,24 +80,14 @@ public class IsWorking {
     
     public static void bruitage(String occasion) throws LineUnavailableException, UnsupportedAudioFileException, IOException {
   	 
-    	if (occasion == "victory") {
-  		  URL url = new URL(
-  		            "file://victoire.wav");
-  		        Clip clip = AudioSystem.getClip();
-  		        AudioInputStream ais = AudioSystem.
-                  getAudioInputStream( url );
-              clip.open(ais);
-  		        clip.start();
-    	}
-    	else if (occasion == "perdu") {
-  		  URL url = new URL(
-  		            "file:///home/david/Téléchargements/3731.wav");
-  		        Clip clip = AudioSystem.getClip();
-  		        AudioInputStream ais = AudioSystem.
-  		            getAudioInputStream( url );
-  		        clip.open(ais);
-  		        clip.start();
-  	  	}
+	  URL url = new URL(
+	            "file:"+occasion+".wav");
+	        Clip clip = AudioSystem.getClip();
+	        AudioInputStream ais = AudioSystem.
+              getAudioInputStream( url );
+          clip.open(ais);
+	        clip.start();
+    	
     }
 }
 /**
