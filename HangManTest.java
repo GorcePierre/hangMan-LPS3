@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.io.FileNotFoundException;
 
 /**
  * HangManTest
@@ -8,9 +9,9 @@ public class HangManTest {
      * IsPrinting test.
      */
 
-    public static void printTest() {
-        int index = 0;
-        assertEquals(" --> PRINTED TEXT", "WELCOME TO HANGMAN", IsPrinting.text(index));
+    public static void printTest() throws FileNotFoundException {
+        String index = "playerOne";
+        assertEquals(" --> PRINTED TEXT", "                 Joueur 1 entrez un mot:", IsPrinting.text(index));
 
     }
 
