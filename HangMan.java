@@ -21,12 +21,19 @@ public class HangMan {
         String[] hiddenWord = new String[wordToFind.length()];
         //System.out.println(wordToFind);
         hiddenWord = Word.hideWord(wordToFind);
+        String playerMode;
+    	if(letterChoiceMode == 'S') {
+    		playerMode = "onePlayer";
+    	}
+    	else {
+    		playerMode = "playerTwo";
+    	}
 
         int tryHit = 1;
 
         while (!isVictory && tryHit < 7) {
         	Word.showWord(hiddenWord, tryHit);
-            IsPrinting.text("playerTwo");
+        	IsPrinting.text(playerMode);
             String chosenLetter = User.isSelectletter();
             boolean letterOk = Word.verifyLetter(chosenLetter, wordToFind);
             if(letterOk) {

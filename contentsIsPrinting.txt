@@ -3,6 +3,7 @@
                     |____________________|
 /
                 Veuillez choisir un mode de jeu.. Solo (S) ou Multijoueur (M) : /
+                Entrez une lettre: /
                 Entrez le nombre maximum de lettres: /
                 Joueur 1 entrez un mot: /
                 Joueur 2 entrez une lettre: /

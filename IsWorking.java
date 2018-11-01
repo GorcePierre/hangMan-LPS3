@@ -54,7 +54,7 @@ public class IsWorking {
             IsPrinting.text("win2");
     	}
     	else {
-    		//IsWorking.bruitage("loose");
+    		IsWorking.bruitage("loose");
             IsPrinting.text("loose");
             IsPrinting.slowWriting(wordToFind);
     	}
