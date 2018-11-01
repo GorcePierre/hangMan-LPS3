@@ -20,7 +20,7 @@ public class User {
 
 
     public static String isSelectWord(int maxLength) {
-        String word = input.nextLine();
+        String word = input.nextLine().toUpperCase();
         while(word.length() > maxLength) {
 
 

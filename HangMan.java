@@ -17,7 +17,7 @@ public class HangMan {
         IsPrinting.text("title");
         char letterChoiceMode = User.choiceModeGame();
         boolean isVictory = false;
-        String wordToFind = IsWorking.logicMode(letterChoiceMode).toLowerCase();
+        String wordToFind = IsWorking.logicMode(letterChoiceMode).toUpperCase();
         String[] hiddenWord = new String[wordToFind.length()];
         //System.out.println(wordToFind);
         hiddenWord = Word.hideWord(wordToFind);
