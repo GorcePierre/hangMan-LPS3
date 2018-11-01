@@ -30,6 +30,16 @@ public class Word {
     }
     return hiddenWord;
   }
+  
+  public static boolean verifyLetter(String letter, String word) {
+	    String[] splitedWord = word.split("");
+	    for (String character : splitedWord) {
+	      if (letter.equals(character)) {
+	        return true;
+	      }
+	    }
+	    return false;
+  }
 
   public static int[] checkPositionLetter(String word, String letter) {
     int index = 0;
@@ -54,21 +64,22 @@ public class Word {
     }
     return hiddenWord;
   }
+  
+  public static void showWord(String[] hiddenWord, int tryNum) {
 
-  public static boolean setVIctory(String[] hiddenWord, String word, int tryNum) {
-    if (tryNum < 7) {
       String isStringFoundWord = String.join("", hiddenWord);
       System.out.println("le mot caché est : " + isStringFoundWord);
-      System.out.println("il reste " + (7 - (tryNum)) + " tentative(s)");
+      System.out.println("il reste " + ( 7 - (tryNum)) + " tentative(s)");
+  }
+
+  public static boolean setVIctory(String[] hiddenWord, String word, int tryNum) {
+      String isStringFoundWord = String.join("", hiddenWord);
 
       if (isStringFoundWord.equals(word)) {
         return true;
       } else {
         return false;
       }
-    }
-
-    return true;
 
   }
 }

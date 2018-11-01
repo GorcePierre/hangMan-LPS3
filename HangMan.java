@@ -26,13 +26,19 @@ public class HangMan {
 
         int tryHit = 1;
 
-        while (!isVictory) {
+        while (!isVictory && tryHit > 0) {
+        	Word.showWord(hiddenWord, tryHit);
             IsPrinting.text("playerTwo");
             String chosenLetter = User.isSelectletter();
-            int[] letterPosition = Word.checkPositionLetter(wordToFind, chosenLetter);
-            String[] foundLetters = Word.replaceLetter(letterPosition, chosenLetter, hiddenWord);
-            isVictory = Word.setVIctory(foundLetters, wordToFind, tryHit);
-            tryHit++;
+            boolean letterOk = Word.verifyLetter(chosenLetter, wordToFind);
+            if(letterOk) {
+            	int[] letterPosition = Word.checkPositionLetter(wordToFind, chosenLetter);
+            	String[] foundLetters = Word.replaceLetter(letterPosition, chosenLetter, hiddenWord);
+            	isVictory = Word.setVIctory(foundLetters, wordToFind, tryHit);
+            }
+            else {
+            	tryHit ++;
+            }
 
         }
         try {
