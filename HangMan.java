@@ -9,6 +9,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
  */
 public class HangMan {
 
+
     public static void main(String[] args) throws FileNotFoundException, LineUnavailableException,  UnsupportedAudioFileException, IOException, InterruptedException{
         
 		IsWorking.bruitage("title");
@@ -18,7 +19,7 @@ public class HangMan {
         boolean isVictory = false;
         String wordToFind = IsWorking.logicMode(letterChoiceMode);
         String[] hiddenWord = new String[wordToFind.length()];
-
+System.out.println(wordToFind);
         hiddenWord = Word.hideWord(wordToFind);
 
         int tryHit = 1;
@@ -49,12 +50,7 @@ public class HangMan {
 
 		Thread.sleep(5000);
 
-        HangManTest.hideWordTest();
-        HangManTest.printTest();
-        HangManTest.replaceLetterTest();
-        HangManTest.checkPositionLetterTest();
-        HangManTest.setVictoryTest();
-        HangManTest.verifyLetterTest();
+        HangManTest.launcherTest();
     }
 
 }

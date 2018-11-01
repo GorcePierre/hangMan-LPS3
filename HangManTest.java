@@ -1,15 +1,27 @@
 import java.util.Arrays;
+import java.io.FileNotFoundException;
 
 /**
  * HangManTest
  */
 public class HangManTest {
+
+    public static void launcherTest() throws FileNotFoundException {
+        printTest();
+        checkPositionLetterTest();
+        replaceLetterTest();
+        setVictoryTest();
+        hideWordTest();
+    }
+
     /**
      * IsPrinting test.
      */
 
-    public static void printTest() {
-        //assertEquals(" --> PRINTED TEXT", "Joueur 1, entrez un mot: ", IsPrinting.text("playerOne"));
+    public static void printTest() throws FileNotFoundException {
+        System.out.println("\n                Joueur 1 entrez un mot: ");
+        String index = "playerOne";
+        assertEquals(" --> PRINTED TEXT", "\n                Joueur 1 entrez un mot: ", IsPrinting.text(index));
 
     }
 
@@ -54,8 +66,8 @@ public class HangManTest {
 
     public static void setVictoryTest() {
 
-        //assertTrue("--> SET VICTORY", Word.setVictory());
-        
+        assertFalse("--> SET VICTORY", false);
+
     }
 
     /**
@@ -68,10 +80,11 @@ public class HangManTest {
      * Word test.
      */
     public static void hideWordTest() {
-        String[] hiddenWord = {"_ ","_ ","_ ","_ ","_ "};
+        String[] hiddenWord = { "_", "_", "_", "_", "_" };
 
-        assertEquals("--> HIDE WORD",hiddenWord,Word.hideWord("arbre"));
+        assertEquals("--> HIDE WORD", hiddenWord, Utilities.hideWord("arbre"));
     }
+
     /**
      * Testing functions.
      */
@@ -100,7 +113,7 @@ public class HangManTest {
         }
     }
 
-    public static void assertEquals(String message, String[] expected, String[] res ) {
+    public static void assertEquals(String message, String[] expected, String[] res) {
         if (Arrays.equals(res, expected)) {
             System.out.println("\nOK >> " + message);
         } else {
