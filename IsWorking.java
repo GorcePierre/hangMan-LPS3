@@ -47,6 +47,18 @@ public class IsWorking {
 	        clip.start();
     	
     }
+    
+    public static void endTour(boolean victory, String wordToFind) throws LineUnavailableException, UnsupportedAudioFileException, IOException {
+    	if(victory) {
+            IsWorking.bruitage("victory");
+            IsPrinting.text("win2");
+    	}
+    	else {
+    		//IsWorking.bruitage("loose");
+            IsPrinting.text("loose");
+            IsPrinting.slowWriting(wordToFind);
+    	}
+    }
 }
 /**
  * Creating with <3 by LPS3 14/10/2018

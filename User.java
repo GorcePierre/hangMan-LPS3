@@ -32,7 +32,7 @@ public class User {
     }
 
     public static String isSelectletter() {
-        String ChosenLetter = input.nextLine();
+        String ChosenLetter = input.nextLine().toUpperCase();
         while (ChosenLetter.length() > 1 || ChosenLetter.length() <= 0) {
             System.out.println("Merci de saisir un seul caractere: ");
             ChosenLetter = input.nextLine();

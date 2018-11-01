@@ -43,7 +43,7 @@ public class Word {
   }
 
   public static int[] checkPositionLetter(String word, String letter) {
-    System.out.println(word);
+    //System.out.println(word);
     int index = 0;
     List<Integer> indexList = new ArrayList<Integer>();
     String[] splitedWord = word.split("");
@@ -56,13 +56,13 @@ public class Word {
     }
     int[] letterPositions = new int[indexList.size()];
     letterPositions = indexList.stream().mapToInt(Integer::intValue).toArray();
-    System.out.println(Arrays.toString(letterPositions));
+    //System.out.println(Arrays.toString(letterPositions));
     
     return letterPositions;
   }
 
   public static String[] replaceLetter(int[] positions, String letter, String[] hiddenWord) {
-System.out.println(Arrays.toString(positions));
+	//System.out.println(Arrays.toString(positions));
     for (int position : positions) {
       hiddenWord[position] = letter;
     }
