@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
  */
 public class HangManTest {
 
-    public static void launcherTest() {
+    public static void launcherTest() throws FileNotFoundException {
         printTest();
         checkPositionLetterTest();
         replaceLetterTest();

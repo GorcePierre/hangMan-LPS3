@@ -13,7 +13,6 @@ public class HangMan {
         try {
 			IsWorking.bruitage("title");
 		} catch (LineUnavailableException | UnsupportedAudioFileException | IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         IsPrinting.text("title");
@@ -38,7 +37,6 @@ public class HangMan {
         try {
 			IsWorking.bruitage("victory");
 		} catch (LineUnavailableException | UnsupportedAudioFileException | IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         

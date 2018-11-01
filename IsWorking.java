@@ -19,7 +19,6 @@ public class IsWorking {
     public static String randomWord() {
   		String[] listWords = {"ABLATION","HYPOCRISIE","INTERMINABLE","REVOLUTION","ERUDIT","ACCUEIL","EXPLOSION","RELIURE","PETIT","PIQUET","SIMPLON","BIERE"};
   		int randomNumber = new Random().nextInt(listWords.length);
-      System.out.println(randomNumber);
   		return listWords[randomNumber];
     }
 
