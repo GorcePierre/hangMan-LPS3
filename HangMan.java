@@ -18,16 +18,16 @@ public class HangMan {
         IsPrinting.text("title");
         char letterChoiceMode = User.choiceModeGame();
         boolean isVictory = false;
-        String wordToFind = IsWorking.logicMode(letterChoiceMode);
+        String wordToFind = IsWorking.logicMode(letterChoiceMode).toLowerCase();
         String[] hiddenWord = new String[wordToFind.length()];
-System.out.println(wordToFind);
-        hiddenWord = Word.hideWord(wordToFind);
+        
+        hiddenWord = Word.hideWord(wordToFind.toLowerCase());
 
         int tryHit = 1;
 
         while (!isVictory) {
             IsPrinting.text("playerTwo");
-            String chosenLetter = User.isSelectletter();
+            String chosenLetter = User.isSelectletter().toLowerCase();
             int[] letterPosition = Word.checkPositionLetter(wordToFind, chosenLetter);
             String[] foundLetters = Word.replaceLetter(letterPosition, chosenLetter, hiddenWord);
             isVictory = Word.setVIctory(foundLetters, wordToFind, tryHit);
