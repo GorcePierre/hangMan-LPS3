@@ -9,8 +9,7 @@ public class HangManTest {
      */
 
     public static void printTest() {
-        int index = 0;
-        assertEquals(" --> PRINTED TEXT", "WELCOME TO HANGMAN", IsPrinting.text(index));
+        //assertEquals(" --> PRINTED TEXT", "Joueur 1, entrez un mot: ", IsPrinting.text("playerOne"));
 
     }
 
@@ -27,6 +26,14 @@ public class HangManTest {
         assertEquals(" --> CHECKED LETTER", letterIndex1, IsWorking.checkPositionLetter("jadhad", "d"));
         assertEquals(" --> CHECKED LETTER", letterIndex2, IsWorking.checkPositionLetter("jadhad", "h"));
 
+    }
+    
+    public static void verifyLetterTest() {
+    	assertTrue("--> LETTER OK", Word.verifyLetter("a", "jahad"));
+    	assertTrue("--> LETTER OK", Word.verifyLetter("d", "jahad"));
+    	assertTrue("--> LETTER OK", Word.verifyLetter("j", "jahad"));
+    	assertFalse("--> LETTER NOT FOUND", Word.verifyLetter("x", "jahad"));
+    	assertFalse("--> LETTER NOT FOUND", Word.verifyLetter("b", "jahad"));
     }
 
     public static void replaceLetterTest() {
@@ -47,7 +54,7 @@ public class HangManTest {
 
     public static void setVictoryTest() {
 
-        assertFalse("--> SET VICTORY", false);
+        //assertTrue("--> SET VICTORY", Word.setVictory());
         
     }
 
@@ -55,14 +62,16 @@ public class HangManTest {
      * User test.
      */
 
+
+
     /**
-     * Utilities test.
+     * Word test.
      */
     public static void hideWordTest() {
-        String[] hiddenWord = {"_","_","_","_","_"};
+        String[] hiddenWord = {"_ ","_ ","_ ","_ ","_ "};
 
-        assertEquals("--> HIDE WORD",hiddenWord,Utilities.hideWord("arbre"));
-    }    
+        assertEquals("--> HIDE WORD",hiddenWord,Word.hideWord("arbre"));
+    }
     /**
      * Testing functions.
      */

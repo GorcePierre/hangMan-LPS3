@@ -9,13 +9,10 @@ import javax.sound.sampled.UnsupportedAudioFileException;
  */
 public class HangMan {
 
-    public static void main(String[] args) throws FileNotFoundException {
-        try {
-			IsWorking.bruitage("title");
-		} catch (LineUnavailableException | UnsupportedAudioFileException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    public static void main(String[] args) throws FileNotFoundException, LineUnavailableException,  UnsupportedAudioFileException, IOException, InterruptedException{
+        
+		IsWorking.bruitage("title");
+		
         IsPrinting.text("title");
         char letterChoiceMode = User.choiceModeGame();
         boolean isVictory = false;
@@ -41,12 +38,8 @@ public class HangMan {
             }
 
         }
-        try {
-			IsWorking.bruitage("victory");
-		} catch (LineUnavailableException | UnsupportedAudioFileException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+        IsWorking.bruitage("victory");
         
         if (tryHit < 7) {
             IsPrinting.text("win2");
@@ -54,18 +47,14 @@ public class HangMan {
             IsPrinting.text("win1");
         
 
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		Thread.sleep(5000);
 
         HangManTest.hideWordTest();
         HangManTest.printTest();
         HangManTest.replaceLetterTest();
         HangManTest.checkPositionLetterTest();
         HangManTest.setVictoryTest();
+        HangManTest.verifyLetterTest();
     }
 
 }
