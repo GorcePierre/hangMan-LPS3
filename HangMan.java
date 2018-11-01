@@ -51,15 +51,10 @@ public class HangMan {
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-        HangManTest.hideWordTest();
-        HangManTest.printTest();
-        HangManTest.replaceLetterTest();
-        HangManTest.checkPositionLetterTest();
-        HangManTest.setVictoryTest();
+        HangManTest.launcherTest();
     }
 
 }
