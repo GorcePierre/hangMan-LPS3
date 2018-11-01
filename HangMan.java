@@ -20,7 +20,7 @@ public class HangMan {
         boolean isVictory = false;
         String wordToFind = IsWorking.logicMode(letterChoiceMode);
         String[] hiddenWord = new String[wordToFind.length()];
-
+System.out.println(wordToFind);
         hiddenWord = Word.hideWord(wordToFind);
 
         int tryHit = 1;

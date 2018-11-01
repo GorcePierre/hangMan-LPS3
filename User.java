@@ -37,7 +37,7 @@ public class User {
             System.out.println("Merci de saisir un seul caractere: ");
             ChosenLetter = input.nextLine();
         }
-        return ChosenLetter.toUpperCase();
+        return ChosenLetter;
     }
 
     public static int chooseMaxLength() {
