@@ -1,1 +1,1 @@
-title/modeToPlay/onePlayer/userMaxLetter/playerOne/playerTwo/win1/win2/loose/ 
+title/modeToPlay/onePlayer/userMaxLetter/playerOne/playerTwo/win1/win2/loose/  

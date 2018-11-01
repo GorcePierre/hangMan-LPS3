@@ -27,6 +27,12 @@ public class IsPrinting {
     slowWriting(sentence.get(word));
     return sentence.get(word);
   }
+  
+  static String dessin(int index) throws FileNotFoundException {
+	    String[] data = ReadContents("dessins.txt");
+	    System.out.println(data[index]);
+	    return data[index];
+	  }
 
   // Method for writing sentences letter by letter slowly.
   static void slowWriting(String word) {

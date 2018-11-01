@@ -9,6 +9,4 @@
                 Joueur 2 entrez une lettre: /
                 Bravo Joueur1 ! Vous avez gagné !!/
                 Bravo Joueur2 ! Vous avez gagné !!/
-                Perdu, le mot été : /
-                 
-                                                   
+                Perdu, le mot été : /                                                 

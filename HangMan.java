@@ -29,9 +29,10 @@ public class HangMan {
     		playerMode = "playerTwo";
     	}
 
-        int tryHit = 1;
+        int tryHit = 0;
 
-        while (!isVictory && tryHit < 7) {
+        while (!isVictory && tryHit < 9) {
+    		IsPrinting.dessin(tryHit);
         	Word.showWord(hiddenWord, tryHit);
         	IsPrinting.text(playerMode);
             String chosenLetter = User.isSelectletter();
@@ -45,7 +46,7 @@ public class HangMan {
             	tryHit ++;
             }
         }
-		IsWorking.endTour(isVictory, wordToFind);
+		IsWorking.endTour(isVictory, wordToFind, tryHit);
         
 
 		Thread.sleep(5000);

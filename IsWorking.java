@@ -48,12 +48,13 @@ public class IsWorking {
     	
     }
     
-    public static void endTour(boolean victory, String wordToFind) throws LineUnavailableException, UnsupportedAudioFileException, IOException {
+    public static void endTour(boolean victory, String wordToFind, int tryHit) throws LineUnavailableException, UnsupportedAudioFileException, IOException {
     	if(victory) {
             IsWorking.bruitage("victory");
             IsPrinting.text("win2");
     	}
     	else {
+    		IsPrinting.dessin(tryHit);
     		IsWorking.bruitage("loose");
             IsPrinting.text("loose");
             IsPrinting.slowWriting(wordToFind);

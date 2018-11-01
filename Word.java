@@ -73,7 +73,7 @@ public class Word {
 
       String isStringFoundWord = String.join("", hiddenWord);
       System.out.println("le mot caché est : " + isStringFoundWord);
-      System.out.println("il reste " + ( 7 - (tryNum)) + " tentative(s)");
+      System.out.println("il reste " + ( 9 - (tryNum)) + " tentative(s)");
   }
 
   public static boolean setVIctory(String[] hiddenWord, String word, int tryNum) {
