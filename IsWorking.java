@@ -50,12 +50,12 @@ public class IsWorking {
     
     public static void endTour(boolean victory, String wordToFind, int tryHit) throws LineUnavailableException, UnsupportedAudioFileException, IOException {
     	if(victory) {
-            IsWorking.bruitage("victory");
+            IsWorking.bruitage("./assets/sounds/victory");
             IsPrinting.text("win2");
     	}
     	else {
     		IsPrinting.dessin(tryHit);
-    		IsWorking.bruitage("loose");
+            IsWorking.bruitage("./assets/sounds/loose");
             IsPrinting.text("loose");
             IsPrinting.slowWriting(wordToFind);
     	}

@@ -12,7 +12,7 @@ public class HangMan {
 
     public static void main(String[] args) throws FileNotFoundException, LineUnavailableException,  UnsupportedAudioFileException, IOException, InterruptedException{
         
-		IsWorking.bruitage("title");
+		IsWorking.bruitage("assets/sounds/title");
 		
         IsPrinting.text("title");
         char letterChoiceMode = User.choiceModeGame();

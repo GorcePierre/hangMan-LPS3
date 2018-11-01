@@ -16,8 +16,8 @@ public class IsPrinting {
   // Method that displays and returns a sentence and that takes in parameter a
   // word.
   static String text(String word) throws FileNotFoundException {
-    String[] data = ReadContents("contentsIsPrinting.txt");
-    String[] title = ReadContents("hastableKeys.txt");
+    String[] data = ReadContents("assets/contents/contentsIsPrinting.txt");
+    String[] title = ReadContents("assets/contents/hastableKeys.txt");
     Hashtable<String, String> sentence = new Hashtable<String, String>(); 
 
     for (int i = 0; i < data.length; i++) {
@@ -29,7 +29,7 @@ public class IsPrinting {
   }
   
   static String dessin(int index) throws FileNotFoundException {
-	    String[] data = ReadContents("dessins.txt");
+	    String[] data = ReadContents("assets/contents/dessins.txt");
 	    System.out.println(data[index]);
 	    return data[index];
 	  }
