@@ -18,7 +18,7 @@ public class IsPrinting {
   static String text(String word) throws FileNotFoundException {
     String[] data = ReadContents("assets/contents/contentsIsPrinting.txt");
     String[] title = ReadContents("assets/contents/hastableKeys.txt");
-    Hashtable<String, String> sentence = new Hashtable<String, String>(); 
+    Hashtable<String, String> sentence = new Hashtable<String, String>();
 
     for (int i = 0; i < data.length; i++) {
       //System.out.print(data[i]);
@@ -27,7 +27,7 @@ public class IsPrinting {
     slowWriting(sentence.get(word));
     return sentence.get(word);
   }
-  
+
   static String dessin(int index) throws FileNotFoundException {
 	    String[] data = ReadContents("assets/contents/dessins.txt");
 	    System.out.println(data[index]);
@@ -47,7 +47,6 @@ public class IsPrinting {
   }
 
   // read .txt files , fetch content & title
-
   public static String[] ReadContents(String path) throws FileNotFoundException { // mise en parametre du chemin vers le fichier (ds)
 
     try {
