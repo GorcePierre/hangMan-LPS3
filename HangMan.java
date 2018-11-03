@@ -15,6 +15,9 @@ public class HangMan {
 		IsWorking.bruitage("assets/sounds/title");
 		
         IsPrinting.text("title");
+        
+        boolean continu;
+        do {
         char letterChoiceMode = User.choiceModeGame();
         boolean isVictory = false;
         String wordToFind = IsWorking.logicMode(letterChoiceMode).toUpperCase();
@@ -49,6 +52,10 @@ public class HangMan {
         
 
 		Thread.sleep(5000);
+		
+		continu = User.continu();
+		
+        }while(continu);
 
         HangManTest.launcherTest();
     }

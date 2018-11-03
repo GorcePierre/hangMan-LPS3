@@ -48,6 +48,23 @@ public class User {
         int maxLength = Integer.parseInt(input.nextLine());
         return maxLength;
     }
+    
+    public static boolean continu() throws FileNotFoundException {
+    	char choice = ' ';
+    	
+    	while(choice != 'O' && choice != 'N') {
+        	IsPrinting.text("continuer");
+        	choice = input.nextLine().toUpperCase().charAt(0);
+        	
+    	}
+    	
+    	if(choice == 'O') {
+    		return true;
+    	}
+    	else{
+    		return false;
+    	}
+    }
 
 }
 /**
