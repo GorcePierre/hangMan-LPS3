@@ -20,7 +20,7 @@ public class User {
 
 
     public static String isSelectWord(int maxLength) {
-        String word = input.nextLine().toUpperCase();
+        String word = IsWorking.readPassword(); //print with stars;
         while(word.length() > maxLength) {
 
 

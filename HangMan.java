@@ -5,8 +5,8 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
 /**
- * HangMan
- */
+* HangMan
+*/
 public class HangMan {
 
 
@@ -31,36 +31,34 @@ public class HangMan {
     	else {
     		playerMode = "playerTwo";
     	}
-
-        int tryHit = 0;
-        while (!isVictory && tryHit < 9) {
-    		IsPrinting.dessin(tryHit);
-        	Word.showWord(hiddenWord, tryHit);
-        	IsPrinting.text(playerMode);
-            String chosenLetter = User.isSelectletter();
-            boolean letterOk = Word.verifyLetter(chosenLetter, wordToFind);
-            if(letterOk) {
-            	int[] letterPosition = Word.checkPositionLetter(wordToFind, chosenLetter);
-            	String[] foundLetters = Word.replaceLetter(letterPosition, chosenLetter, hiddenWord);
-            	isVictory = Word.setVIctory(foundLetters, wordToFind, tryHit);
-            }
-            else {
-            	tryHit ++;
-            }
-        }
-		IsWorking.endTour(isVictory, wordToFind, tryHit);
-        
-
-		Thread.sleep(5000);
-		
-		continu = User.continu();
-		
-        }while(continu);
-
-        HangManTest.launcherTest();
+    int tryHit = 0;
+    
+    while (!isVictory && tryHit < 9) {
+      IsPrinting.dessin(tryHit);
+      Word.showWord(hiddenWord, tryHit);
+      IsPrinting.text(playerMode);
+      String chosenLetter = User.isSelectletter();
+      boolean letterOk = Word.verifyLetter(chosenLetter, wordToFind);
+      if(letterOk) {
+        int[] letterPosition = Word.checkPositionLetter(wordToFind, chosenLetter);
+        String[] foundLetters = Word.replaceLetter(letterPosition, chosenLetter, hiddenWord);
+        isVictory = Word.setVIctory(foundLetters, wordToFind, tryHit);
+      }
+      else {
+        tryHit ++;
+      }
     }
+    IsWorking.endTour(isVictory, wordToFind, tryHit);
+
+    Thread.sleep(5000);
+	
+	continu = User.continu();
+	
+    }while(continu);
+    HangManTest.launcherTest();
+  }
 
 }
 /**
- * Creating wiht <3 by LPS3 14/10/2018
- */
+* Creating wiht <3 by LPS3 14/10/2018
+*/

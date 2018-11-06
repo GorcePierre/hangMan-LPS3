@@ -10,4 +10,4 @@
                 Bravo Joueur1 ! Vous avez gagné !!/
                 Bravo Joueur2 ! Vous avez gagné !!/
                 Perdu, le mot été : /
-                Continuer? O-oui N-non/                                                 
+                Continuer? O-oui N-non/ 
